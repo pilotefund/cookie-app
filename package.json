@@ -1,0 +1,65 @@
+{
+  "name": "cookie-app",
+  "version": "2.0.2",
+  "description": "Quebec Law 25 (Bill 64) cookie consent for React & Next.js. Script blocking, Google Consent Mode v2, 3 banner styles, bilingual, zero dependencies.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "example": "npm run dev --prefix example",
+    "prepublishOnly": "npm run build",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0"
+  },
+  "keywords": [
+    "loi25",
+    "loi-25",
+    "quebec",
+    "cookie-consent",
+    "privacy",
+    "gdpr",
+    "law25",
+    "bill64",
+    "nextjs",
+    "react",
+    "consent-mode",
+    "google-consent-mode",
+    "script-blocking"
+  ],
+  "author": "Rayels Consulting <info@rayelsconsulting.com>",
+  "license": "MIT",
+  "homepage": "https://rayelsconsulting.com/tools/loi25-wordpress-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rayelsconsulting/cookie-app"
+  }
+}
